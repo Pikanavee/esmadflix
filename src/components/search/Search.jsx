@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import styles from "./Search.module.css";
 
 const Search = () => {
   return (
-    <div>Search</div>
-  )
-}
+    <div className={styles.divSearch}>
+      <form>
+        <input type="text" name="search" id="search" />
+      </form>
+    </div>
+  );
+};
 
-export default Search
+export default Search;
