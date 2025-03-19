@@ -1,0 +1,15 @@
+.divMenu {
+  font-size: 32px;
+}
+
+.divMenu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  list-style-type: none
+}
+
+.divMenu ul li a {
+  text-decoration: none;
+  padding: 12px 24px;
+}
