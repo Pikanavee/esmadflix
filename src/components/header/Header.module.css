@@ -1,0 +1,25 @@
+.divHeader {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.divRaposa {
+  width: 450px;
+  text-align: right;
+}
+.imgRaposa {
+  width: 250px;
+}
+
+.imgLogo {
+  width: 450px;
+  height: 125px;
+}
+
+.divLogo {
+  width: 750px;
+  text-align: center;
+}

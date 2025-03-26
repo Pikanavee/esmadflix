@@ -1,12 +1,13 @@
 .divMenu {
-  font-size: 32px;
+  font-size: 20px;
 }
 
 .divMenu ul {
+  width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: end;
-  list-style-type: none
+  list-style-type: none;
 }
 
 .divMenu ul li a {

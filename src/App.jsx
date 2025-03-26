@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/header/Header";
 import MovieCard from "./components/movieCard/MovieCard";
 import Footer from "./components/footer/Footer";
+import "./scss/styles.scss";
 
 const App = () => {
   return (

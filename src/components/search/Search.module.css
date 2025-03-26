@@ -4,7 +4,8 @@
 }
 
 .divSearch input {
+  margin-top: 36px;
   border-radius: 37px;
-  width: 676px;
-  height: 65px;
+  width: 450px;
+  height: 45px;
 }
