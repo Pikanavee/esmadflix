@@ -2,13 +2,13 @@
   margin-top: 50px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-size: 14px;
 }
 
 .divRaposa {
-  width: 450px;
-  text-align: right;
+  width: 260px;
+  text-align: start;
 }
 .imgRaposa {
   width: 250px;
@@ -20,6 +20,10 @@
 }
 
 .divLogo {
-  width: 750px;
+  width: 450px;
   text-align: center;
+}
+.divMenu {
+  font-size: 20px;
+  width: 260px;
 }

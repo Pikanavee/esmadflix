@@ -21,7 +21,9 @@ const Header = () => {
           <img src={Logo} alt="Logo da EsmadFlix" className={styles.imgLogo} />
           <Search></Search>
         </div>
-        <Menu />
+        <div className={styles.divMenu}>
+          <Menu />
+        </div>
       </div>
     </>
   );

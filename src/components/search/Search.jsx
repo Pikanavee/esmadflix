@@ -5,7 +5,12 @@ const Search = () => {
   return (
     <div className={styles.divSearch}>
       <form>
-        <input type="text" name="search" id="search" />
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Pesquisar..."
+        />
       </form>
     </div>
   );

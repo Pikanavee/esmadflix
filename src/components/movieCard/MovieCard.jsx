@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./MovieCard.module.css";
 
 const MovieCard = ({ title, description, image }) => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div
       className={styles.card}
@@ -13,7 +15,14 @@ const MovieCard = ({ title, description, image }) => {
     >
       <div className={styles.cardContent}>
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p
+          className={expanded ? styles.expanded : styles.truncated}
+          onClick={() => setExpanded((v) => !v)}
+          title={expanded ? "Clique para recolher" : "Clique para expandir"}
+          style={{ cursor: "pointer" }}
+        >
+          {description}
+        </p>
       </div>
     </div>
   );

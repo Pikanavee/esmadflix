@@ -4,7 +4,7 @@
   grid-template-rows: repeat(1, 1fr);
   gap: 32px;
   width: 90%;
-  height: 400px;
+  height: 360px;
   margin: 32px auto;
   align-items: center;
   justify-items: center;
@@ -14,8 +14,8 @@
   position: relative;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-  width: 250px;
-  height: 360px;
+  width: 210px;
+  height: 290px;
   color: #fff;
   display: flex;
   align-items: flex-end;
@@ -37,10 +37,28 @@
 }
 .cardContent h3 {
   margin: 0 0 8px 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .cardContent p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: #ccc;
+}
+
+.truncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: max-height 0.2s;
+  max-height: 4.5em; /* Aproximadamente 3 linhas */
+}
+
+.expanded {
+  display: block;
+  overflow: visible;
+  cursor: pointer;
+  max-height: none;
 }

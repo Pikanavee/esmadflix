@@ -1,9 +1,10 @@
 .divMenu {
   font-size: 20px;
+  width: 260px;
 }
 
 .divMenu ul {
-  width: 500px;
+  width: 600px;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -15,6 +16,7 @@
   text-decoration: none;
   padding: 12px 24px;
   color: white;
+  font-size: 20px;
 }
 
 .divMenu ul li a:hover {
@@ -22,4 +24,62 @@
   font-style: italic;
   padding: 12px 24px;
   color: white;
+  font-size: 20px;
+}
+
+.menuContainer {
+  width: 100%;
+  max-width: 1200px; /* igual ao container do logo */
+  margin: 32px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.menuLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 20px;
+}
+
+.menuLink:hover {
+  color: #e50914;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
