@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./MovieCard.module.css";
 
-const MovieCard = ({ title, description, image }) => {
+const MovieCard = ({ title, description, image, onSelect }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -14,7 +14,15 @@ const MovieCard = ({ title, description, image }) => {
       }}
     >
       <div className={styles.cardContent}>
-        <h3>{title}</h3>
+        <h3 onClick={onSelect} style={{ cursor: "pointer" }}>
+          {title}
+        </h3>
+        <img
+          src={image}
+          alt={title}
+          style={{ display: "none" }}
+          onClick={onSelect}
+        />
         <p
           className={expanded ? styles.expanded : styles.truncated}
           onClick={() => setExpanded((v) => !v)}
@@ -24,6 +32,19 @@ const MovieCard = ({ title, description, image }) => {
           {description}
         </p>
       </div>
+      {/* Adicione um overlay invisível para capturar clique na imagem */}
+      <div
+        onClick={onSelect}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "70%",
+          cursor: "pointer",
+          zIndex: 1,
+        }}
+      />
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import CardSelected from "./components/cardSelected/CardSelected";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./App.css";
@@ -22,22 +24,27 @@ const movies = [
   },
   {
     title: "A cup of coffee",
-    description: "Num mundo onde os sabores se encontram, Espresso Cookie e Madeleine Cookie se veem lado a lado num café pitoresco, e suas personalidades contrastantes despertam um laço inesperado. Enquanto lidam com as complexidades de suas vidas — uma ousada e intensa, a outra meiga e doce —, elas aprendem a apreciar suas diferenças e a abraçar a beleza da colaboração.",
+    description:
+      "Num mundo onde os sabores se encontram, Espresso Cookie e Madeleine Cookie se veem lado a lado num café pitoresco, e suas personalidades contrastantes despertam um laço inesperado. Enquanto lidam com as complexidades de suas vidas — uma ousada e intensa, a outra meiga e doce —, elas aprendem a apreciar suas diferenças e a abraçar a beleza da colaboração.",
     image: Card2,
   },
   {
     title: "Bittersweet Reality",
-    description: "Dois amigos de longa data navegam por suas complexas emoções, Espresso Cookie luta contra as pressões de um futuro incerto e seu perfeccionismo, já Madeleine Cookie se vê preso entre seus sonhos e a dura realidade da vida cotidiana.",
+    description:
+      "Dois amigos de longa data navegam por suas complexas emoções, Espresso Cookie luta contra as pressões de um futuro incerto e seu perfeccionismo, já Madeleine Cookie se vê preso entre seus sonhos e a dura realidade da vida cotidiana.",
     image: Card3,
   },
   {
     title: "An unexpected guest",
-    description: "Quando Espresso Cookie decide fazer uma visita inesperada a Madeleine Cookie, a atmosfera doce se transforma em um emocionante jogo de descobertas e reviravoltas. Enquanto os dois personagens exploram suas diferenças e semelhanças, eles se deparam com segredos que podem mudar suas vidas para sempre.",
+    description:
+      "Quando Espresso Cookie decide fazer uma visita inesperada a Madeleine Cookie, a atmosfera doce se transforma em um emocionante jogo de descobertas e reviravoltas. Enquanto os dois personagens exploram suas diferenças e semelhanças, eles se deparam com segredos que podem mudar suas vidas para sempre.",
     image: Card4,
   },
 ];
 
 const App = () => {
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
   return (
     <div>
       <Header />
@@ -48,9 +55,16 @@ const App = () => {
             title={movie.title}
             description={movie.description}
             image={movie.image}
+            onSelect={() => setSelectedMovie(movie)}
           />
         ))}
       </div>
+      {selectedMovie && (
+        <CardSelected
+          movie={selectedMovie}
+          onClose={() => setSelectedMovie(null)}
+        />
+      )}
       <Footer />
     </div>
   );
